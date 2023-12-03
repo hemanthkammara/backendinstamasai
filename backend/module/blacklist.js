@@ -7,3 +7,4 @@ const blackschma=mongoose.Schema({
 
 const blackmodel=mongoose.model("black",blackschma);
 module.exports={blackmodel}
+

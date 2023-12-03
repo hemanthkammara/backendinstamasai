@@ -8,6 +8,8 @@ const postRouter=express.Router();
 
 postRouter.use(auth)
 
+
+
 postRouter.post("/add",async(req,res)=>{
     try{
         const post=new postmodel(req.body);

@@ -7,7 +7,7 @@ const auth=(req,res,next)=>{
     if(token){
         jwt.verify(token,"masai",(err,decoded)=>{
             if(decoded){
-console.log(decoded)
+         //console.log(decoded)
                 req.body.username=decoded.username,
                 req.body.userId=decoded.userId
                 next()
@@ -16,7 +16,6 @@ console.log(decoded)
                 console.log(err)
             }
         })
-
     }
     else{
         res.status(200).send({"msg":"please login"})
